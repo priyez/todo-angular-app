@@ -1,0 +1,27 @@
+<!-- searchbox Component -->
+<div class="container">
+
+        <form class="row" [formGroup]="newTodo"  (ngSubmit)="addTodo()" [@openClose]="isDisplay ? 'open' : 'closed'">
+      <input type="text" placeholder="add notes ..."    formControlName="todoItem"/>
+      <button type="submit">+</button>
+    </form>
+
+  
+  
+  
+  
+    <!-- noteCard Component -->
+    <div class="notes-container">
+      <div class="notes" *ngFor ="let value of todoList, index as i">
+        <div>
+          <input type="checkbox" [(ngModel)]="value.completed" (click)="markCompleted(value)">
+        </div>
+        <p class="notes-body"  [ngClass]="{'line-through': value.completed}">{{value.name}}</p>
+        <div>
+          <button  class="deleteButton" (click)="remove(i)">x</button>
+        </div>
+      </div>
+     
+      <button  class="open" (click)="showFormContainer()">{{isDisplay ? 'x' : '+'}}</button>
+  
+    </div>

@@ -1,13 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+    
       declarations: [
         AppComponent
       ],
@@ -23,7 +20,7 @@ describe('AppComponent', () => {
   it(`should have as title 'note-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('note-app');
+    expect(app.title).toEqual('todo-app');
   });
 
   it('should render title', () => {

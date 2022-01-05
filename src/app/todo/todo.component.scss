@@ -1,0 +1,99 @@
+$text-color: #fff;
+$bg-color: #0075ff;
+$del-color: #d97070;
+
+
+.container{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.row input{
+    height: 40px;
+    width: 90%;
+    outline: 0ch;
+    border: 1px solid rgb(149 149 149);
+    border-radius: 10px;
+    padding: 0 2%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    @media only screen and (min-width:770px) {
+            width: 390px;
+        }
+}
+.row{
+    display: flex;
+    width:100%;
+    position:fixed;
+    z-index: 2;
+    @media only screen and (min-width:770px) {
+        position:relative;
+    }
+    & button{
+        width: 15%;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    background-color: $bg-color;
+    color: $text-color;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+}
+.notes-container{
+     position: relative;
+     width: 92.5%;
+     top:80px;
+     @media only screen and (min-width:770px) {
+        width: 100%; 
+     }
+}
+
+.deleteButton{
+    color: $text-color;
+    background-color: $del-color;
+    border-radius: 100px;
+    font-size: 12px;
+    border: none;
+    height: 18px;
+}
+.notes{
+    border-radius: 5px;
+    height: auto;
+    box-shadow: 0 2px 15px 2px #a19c9c;
+    padding: 2%;
+    width: 100%;
+    margin: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    & p{
+        font-size: 15px;
+        margin: 5%;
+    }
+    & div{
+        margin: 5% 0;
+    }
+    .line-through{
+        text-decoration: line-through;
+        color:red; 
+    }
+@media only screen and (min-width:770px) {
+    width:90%;
+    left: -10%; 
+}}
+
+.open{
+    height: 80px;
+    border-radius: 100px;
+    border: none;
+    width: 80px;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    font-size: 45px;
+    font-weight: 700;
+    background-color: $bg-color;
+    color: $text-color;
+}
